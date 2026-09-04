@@ -44,7 +44,7 @@ const About = () => {
               My work centers on solving complex problems across multiple domains. Whether I am building full-stack web applications with the MERN stack, designing privacy-preserving federated learning pipelines with PyTorch, or programming embedded microcontrollers for automated robotics, I prioritize clean architecture and efficient data flow.
             </p>
             <p>
-              Beyond independent research and development, I am passionate about technical education. I have served as an Undergraduate Student Tutor and Machine Learning Instructor, helping peers grasp core algorithmic concepts—which in turn keeps my own foundational engineering skills sharp.
+              Beyond independent research and development, I am passionate about technical education. I have served as an Undergraduate Student Tutor, helping peers grasp core problem solving concepts - which in turn keeps my own foundational engineering skills sharp.
             </p>
             
             <div className="pt-4 flex gap-4">
