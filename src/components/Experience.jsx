@@ -5,8 +5,8 @@ const Experience = () => {
       role: "Undergraduate Student Tutor (ST)",
       company: "Department of CSE, BRAC University",
       location: "Dhaka, Bangladesh",
-      date: "Mar 2026 – May 2026",
-      description: "Appointed as a Student Tutor — a merit-based role equivalent to Teaching Assistant. Led structured consultation sessions for 26 students, helping them grasp core course concepts and prepare for assignments, quizzes, and exams, while collaborating closely with faculty to align tutoring with course objectives and improve learning outcomes."
+      date: "March 2026 – September 2026",
+      description: "Appointed as a Student Tutor — a merit-based role equivalent to Teaching Assistant. Led structured consultation sessions for many students, helping them grasp core course concepts and prepare for assignments, quizzes, and exams, while collaborating closely with faculty to align tutoring with course objectives and improve learning outcomes."
     }
   ];
 

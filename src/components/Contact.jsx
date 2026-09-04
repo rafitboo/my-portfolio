@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { faqs } from './FAQ';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -10,29 +11,6 @@ const Contact = () => {
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
-
-  const faqs = [
-    {
-      question: "Who is Md. Rafiul Islam?",
-      answer: "I am a Computer Science & Engineering (CSE) undergraduate at BRAC University in Dhaka, Bangladesh. I specialize in building scalable full-stack web applications, heterogeneous machine learning models, and embedded robotics systems."
-    },
-    {
-      question: "Are you available for new opportunities?",
-      answer: "Yes, I am actively open to research collaborations, software engineering internships, and freelance development roles where I can apply my skills in AI, backend architecture, and full-stack development."
-    },
-    {
-      question: "What technologies and skills do you specialize in?",
-      answer: "My stack includes the MERN stack, Flask, FastAPI, Python, PyTorch, MongoDB, PostgreSQL, and hardware integrations using microcontrollers like Arduino."
-    },
-    {
-      question: "What kind of projects have you built?",
-      answer: "I have built systems like 'Safe-Passage' (an automated hardware evacuation system), privacy-preserving federated learning pipelines, secure encrypted messaging platforms (ZK Network), and full-stack applications like MediCare and AI Research Assistant."
-    },
-    {
-      question: "How can I contact you for a project?",
-      answer: "You can copy my email directly above, connect via LinkedIn, or check out my repositories on GitHub."
-    }
-  ];
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -94,13 +72,13 @@ const Contact = () => {
         </div>
 
         {/* LinkedIn */}
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer" className="bg-[#35393C] border border-gray-700/50 rounded-xl p-6 flex items-center gap-4 hover:border-[#A4D8FF]/40 transition-all duration-300 hover:shadow-[0_0_15px_rgba(164,216,255,0.2)]">
+        <a href="https://linkedin.com/in/rafitboo/" target="_blank" rel="noreferrer" className="bg-[#35393C] border border-gray-700/50 rounded-xl p-6 flex items-center gap-4 hover:border-[#A4D8FF]/40 transition-all duration-300 hover:shadow-[0_0_15px_rgba(164,216,255,0.2)]">
           <div className="w-12 h-12 bg-[#1E2124] rounded-lg flex items-center justify-center text-[#A4D8FF]">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-wider uppercase mb-1">LinkedIn</p>
-            <p className="text-white font-medium">LinkedIn Profile</p>
+            <p className="text-white font-medium">LinkedIn</p>
           </div>
         </a>
 
@@ -111,7 +89,7 @@ const Contact = () => {
           </div>
           <div>
             <p className="text-gray-500 text-xs font-bold tracking-wider uppercase mb-1">GitHub</p>
-            <p className="text-white font-medium">GitHub Profile</p>
+            <p className="text-white font-medium">GitHub</p>
           </div>
         </a>
 

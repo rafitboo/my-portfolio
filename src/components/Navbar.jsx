@@ -21,7 +21,7 @@ const Navbar = () => {
         <Link 
           to="/" 
           onClick={() => setIsOpen(false)}
-          className={`text-lg font-bold tracking-wider px-4 py-2 transition-all duration-300 ${
+          className={`text-lg font-bold tracking-wider px-4 py-2 transition-all duration-300 hardware-glitch ${
             location.pathname === '/' 
               ? 'text-white drop-shadow-[0_0_10px_rgba(164,216,255,0.8)]' 
               : 'text-white hover:text-[#A4D8FF] hover:drop-shadow-[0_0_10px_rgba(164,216,255,0.8)]'
@@ -37,20 +37,21 @@ const Navbar = () => {
 
             return (
               <Link
-                key={link.name}
+                key={link.path}
                 to={link.path}
-                className={`relative px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-300 z-10 ${
+                className={`relative px-5 py-2 rounded-full text-sm font-semibold transition-colors duration-300 ${
                   isActive ? 'text-white' : 'text-gray-300 hover:text-white'
                 }`}
               >
                 {isActive && (
-                  <motion.span
-                    layoutId="active-pill"
-                    className="absolute inset-0 bg-[#1E2124] border border-[#A4D8FF]/30 rounded-full shadow-[0_0_15px_rgba(164,216,255,0.3)] -z-10"
-                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                  <motion.div
+                    layoutId="nav-pill"
+                    className="absolute inset-0 bg-[#1E2124] border border-[#A4D8FF]/30 shadow-[0_0_15px_rgba(164,216,255,0.3)] z-0"
+                    style={{ borderRadius: 9999 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
-                {link.name}
+                <span className="relative z-10">{link.name}</span>
               </Link>
             );
           })}
@@ -97,7 +98,7 @@ const Navbar = () => {
               const isActive = location.pathname === link.path;
               return (
                 <Link
-                  key={link.name}
+                  key={link.path}
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`px-4 py-3 rounded-xl font-bold transition-colors ${

@@ -6,7 +6,8 @@ const Projects = () => {
       description: "An intelligent, decoupled full-stack web application designed to help researchers and supervisors manage academic literature, collaborate, and leverage AI to accelerate literature reviews.",
       techStack: ["Flask", "FastAPI", "PostgreSQL", "Supabase", "Gemini API", "Tailwind CSS"],
       githubLink: "https://github.com/rafitboo/ai-research-assistant.git",
-      liveLink: ""
+      liveLink: "https://ai-research-assistant-theta-nine.vercel.app/",
+      image: "/ai-research.png"
     },
     {
       _id: "6a9a967285219a48c8da7d3c",
@@ -14,7 +15,8 @@ const Projects = () => {
       description: "A comprehensive online pharmacy platform providing a multi-user environment for customers, staff, and admins to manage inventory, secure checkout via bKash/COD, and real-time support.",
       techStack: ["Python", "Flask", "MySQL", "SQLAlchemy", "JavaScript"],
       githubLink: "https://github.com/rafitboo/Medicare.git",
-      liveLink: ""
+      liveLink: "",
+      image: "/medicare.png"
     },
     {
       _id: "6a9a967285219a48c8da7d3d",
@@ -22,7 +24,8 @@ const Projects = () => {
       description: "A secure, encrypted messaging platform featuring Server-Trusted Key Escrow and Hybrid Asymmetric Cryptography (RSA/ECC) built entirely from mathematical primitives to ensure zero plaintext data at rest.",
       techStack: ["Python", "Django", "SQLite3", "Custom Cryptography", "Bootstrap 5"],
       githubLink: "https://github.com/rafitboo/Zero-Knowledge.git",
-      liveLink: ""
+      liveLink: "",
+      image: "/zk.png"      
     },
     {
       _id: "6a9a967285219a48c8da7d3e",
@@ -30,7 +33,8 @@ const Projects = () => {
       description: "A comprehensive 3D aim trainer featuring dynamic game modes, customizable environments, diverse weapon mechanics, and detailed performance tracking for accuracy and reaction time.",
       techStack: ["Python", "PyOpenGL", "GLUT"],
       githubLink: "https://github.com/rafitboo/CSE423-Computer-Graphics.git",
-      liveLink: ""
+      liveLink: "",
+      image: "/traim.png"
     }
   ];
 
@@ -42,17 +46,15 @@ const Projects = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (
-          <div key={project._id} className="bg-[#35393C] rounded-2xl overflow-hidden flex flex-col border border-gray-700/50 hover:border-[#A4D8FF]/40 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(164,216,255,0.25)]">
+          <div key={project._id} className="bg-[#35393C] rounded-2xl overflow-hidden flex flex-col border border-gray-700/50 hover:border-[#A4D8FF]/40 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[0_0_20px_rgba(164,216,255,0.25)] group">
             
-            {/* Image Placeholder */}
-            <div className="w-full h-56 bg-gradient-to-br from-[#1E2124] to-[#2a2d30] border-b border-gray-700/50 flex items-center justify-center p-6 text-center relative overflow-hidden">
-              <div 
-                className="absolute inset-0 opacity-10" 
-                style={{ backgroundImage: 'radial-gradient(#A4D8FF 1.5px, transparent 1.5px)', backgroundSize: '16px 16px' }}
-              ></div>
-              <span className="text-[#A4D8FF]/50 font-black text-xl tracking-widest uppercase z-10 drop-shadow-md px-4">
-                {project.title}
-              </span>
+            {/* Project Image Container */}
+            <div className="w-full h-56 bg-[#1E2124] border-b border-gray-700/50 relative overflow-hidden">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
             </div>
             
             {/* Content Section */}
