@@ -8,6 +8,7 @@ const Terminal = () => {
     { command: '', output: "Type 'help' to see available commands." }
   ]);
   const scrollRef = useRef(null);
+  const inputRef = useRef(null); // Add a reference for the input field
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -28,7 +29,14 @@ const Terminal = () => {
 
   const handleInputChange = (e) => {
     setInput(e.target.value);
-    playTypeBeep(); // Trigger synthetic audio click on keystroke
+    playTypeBeep(); 
+  };
+
+  // Focus the hidden input whenever the user clicks anywhere in the terminal body
+  const handleTerminalClick = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   };
 
   const handleCommand = (e) => {
@@ -107,7 +115,8 @@ const Terminal = () => {
 
       <div 
         ref={scrollRef}
-        className="p-4 h-64 overflow-y-auto text-gray-300 flex flex-col gap-2 custom-scrollbar"
+        onClick={handleTerminalClick} // Attach the click listener here
+        className="p-4 h-64 overflow-y-auto text-gray-300 flex flex-col gap-2 custom-scrollbar cursor-text" // Added cursor-text for visual feedback
       >
         {history.map((line, index) => (
           <div key={index}>
@@ -124,6 +133,7 @@ const Terminal = () => {
         <form onSubmit={handleCommand} className="flex gap-2 mt-2">
           <span className="text-green-400">guest@rafitboo:~$</span>
           <input
+            ref={inputRef} // Bind the ref to the actual input
             type="text"
             value={input}
             onChange={handleInputChange}
