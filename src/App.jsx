@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 import ParticlesBackground from './components/ParticlesBackground';
 import CustomCursor from './components/CustomCursor';
 import { playTransitionBeep } from './utils/sound';
+import { Analytics } from '@vercel/analytics/react';
 
 const Home = () => {
   return (
@@ -76,6 +77,9 @@ function App() {
         <div className="relative z-10">
           <Footer />
         </div>
+
+        {/* Vercel Analytics */}
+        <Analytics />
       </div>
     </Router>
   );
