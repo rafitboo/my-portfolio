@@ -11,6 +11,15 @@ export default function Projects() {
       liveLink: "https://ai-research-assistant-theta-nine.vercel.app/",
       image: "/ai-research.png"
     },
+        {
+      _id: "6a9a967285219a48c8da7d3e",
+      title: "QuoteVerse",
+      description: "A dynamic web application serving curated quotes across cinema, literature, and gaming with real-time search, tag-based categorization, dynamic filtering, and a responsive animated interface.",
+      techStack: ["Python", "Django", "SQLite", "JavaScript", "Render"],
+      githubLink: "https://github.com/rafitboo/QuoteVerse.git",
+      liveLink: "https://quoteverse.onrender.com",
+      image: "/quote-verse.png"
+    },
     {
       _id: "6a9a967285219a48c8da7d3c",
       title: "MediCare",
@@ -29,15 +38,7 @@ export default function Projects() {
       liveLink: "",
       image: "/zk.png"      
     },
-    {
-      _id: "6a9a967285219a48c8da7d3e",
-      title: "TRAIM - 3D Aim Trainer",
-      description: "A comprehensive 3D aim trainer featuring dynamic game modes, customizable environments, diverse weapon mechanics, and detailed performance tracking for accuracy and reaction time.",
-      techStack: ["Python", "PyOpenGL", "GLUT"],
-      githubLink: "https://github.com/rafitboo/CSE423-Computer-Graphics.git",
-      liveLink: "",
-      image: "/traim.png"
-    }
+    
   ];
 
   return (
