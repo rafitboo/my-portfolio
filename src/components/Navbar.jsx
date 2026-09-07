@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-6 left-0 right-0 z-50 flex justify-center px-4">
       {/* Slightly larger max-width and padding */}
-      <nav className="bg-[#35393C]/90 backdrop-blur-md border border-gray-600 rounded-full p-2 flex items-center justify-between w-full max-w-4xl shadow-xl relative">
+      <nav className="bg-[#35393C]/90 backdrop-blur-md border border-gray-600 rounded-full p-1.5 flex items-center justify-between w-full max-w-4xl shadow-xl relative">
         
         <Link href="/" onClick={() => setIsOpen(false)} className={`text-xl font-bold tracking-wider px-5 py-2.5 transition-all duration-300 hardware-glitch ${pathname === '/' ? 'text-white drop-shadow-[0_0_10px_rgba(164,216,255,0.8)]' : 'text-white hover:text-[#A4D8FF] hover:drop-shadow-[0_0_10px_rgba(164,216,255,0.8)]'}`}>
           @rafitboo
